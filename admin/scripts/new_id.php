@@ -10,4 +10,3 @@ $result = $qry->fetch(PDO::FETCH_ASSOC);
 $newID = $result['last'];
 
 echo $newID;
- ?>

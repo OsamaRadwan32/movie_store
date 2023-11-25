@@ -1,25 +1,21 @@
 <?php
 
-  include '../../scripts/connection.php';
+include '../../scripts/connection.php';
 
-  session_start();
+session_start();
 
-  $user_id = $_SESSION['email'];
-  $pass = $_POST['password'];
+$user_id = $_SESSION['email'];
+$pass = $_POST['password'];
 
-  try {
+try {
 
-    $qry = "UPDATE $dbname.user SET password = $pass WHERE email = $user_id ";
+  $qry = "UPDATE $dbname.user SET password = $pass WHERE email = $user_id ";
 
-    $result = $db->query($qry);
+  $result = $db->query($qry);
 
-    if ($result) {
-      echo "updated";
-    }
-
-  } catch (Exception $e) {
-    echo $e->getMessage();
+  if ($result) {
+    echo "updated";
   }
-
-
- ?>
+} catch (Exception $e) {
+  echo $e->getMessage();
+}

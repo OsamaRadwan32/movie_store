@@ -8,8 +8,7 @@ $dbname = 'the_movie_store';
 try {
   $db = new PDO("mysql: host = $servername; dbname = $dbname", $username, $password);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(Exception $e) {
+} catch (Exception $e) {
   echo "Connection failed: " . $e->getMessage();
   exit;
 }
-?>

@@ -26,13 +26,9 @@ try {
     $_SESSION['role'] = $row['role'];
 
     echo "Login " . $_SESSION['role'];
-
   } else {
     echo "error";
   }
-
 } catch (Exception $e) {
   echo $e->getMessage();
 }
-
-?>

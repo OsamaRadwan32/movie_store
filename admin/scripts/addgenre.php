@@ -1,22 +1,19 @@
 <?php
 
-  include '../../scripts/connection.php';
+include '../../scripts/connection.php';
 
-  $genre_name = $_POST['genre'];
+$genre_name = $_POST['genre'];
 
-  try {
+try {
 
 
-    $sql = "INSERT INTO $dbname.genre (name) VALUES('$genre_name')";
+  $sql = "INSERT INTO $dbname.genre (name) VALUES('$genre_name')";
 
-    $result = $db->query($sql);
+  $result = $db->query($sql);
 
-    if ($result) {
-      echo "Inserted Successfully";
-    }
-
-  } catch (Exception $e) {
-    echo $e->getMessage();
+  if ($result) {
+    echo "Inserted Successfully";
   }
-
- ?>
+} catch (Exception $e) {
+  echo $e->getMessage();
+}

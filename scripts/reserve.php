@@ -14,8 +14,6 @@ try {
   if ($result) {
     echo "inserted";
   }
-
 } catch (Exception $e) {
   echo $e->getMessage();
 }
-?>

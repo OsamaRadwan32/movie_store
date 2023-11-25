@@ -12,8 +12,7 @@ try {
 	$result = $db->query($qry);
 
 	if ($result)
-	  	echo "success";
-	  
+		echo "success";
 } catch (Exception $e) {
 	echo $e->getMessage();
 }

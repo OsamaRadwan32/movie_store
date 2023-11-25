@@ -1,27 +1,24 @@
 <?php
 
-  include '../../scripts/connection.php';
+include '../../scripts/connection.php';
 
-  $movie_name = $_POST['movie_name'];
-  $slug = $_POST['slug'];
-  $description = $_POST['description'];
-  $story_line = $_POST['story_line'];
-  $release_year = $_POST['release_year'];
-  $price = $_POST['price'];
-  
+$movie_name = $_POST['movie_name'];
+$slug = $_POST['slug'];
+$description = $_POST['description'];
+$story_line = $_POST['story_line'];
+$release_year = $_POST['release_year'];
+$price = $_POST['price'];
 
-  try {
 
-    $qry = "INSERT INTO $dbname.movies (name, slug, description, story_line, release_year, price) VALUES('$movie_name', '$slug', '$description', '$story_line', $release_year, '$price')";
+try {
 
-    $result = $db->query($qry);
+  $qry = "INSERT INTO $dbname.movies (name, slug, description, story_line, release_year, price) VALUES('$movie_name', '$slug', '$description', '$story_line', $release_year, '$price')";
 
-    if ($result) {
-      echo "Inserted Successfully";
-    }
+  $result = $db->query($qry);
 
-  } catch (Exception $e) {
-    echo $e->getMessage();
+  if ($result) {
+    echo "Inserted Successfully";
   }
-
- ?>
+} catch (Exception $e) {
+  echo $e->getMessage();
+}

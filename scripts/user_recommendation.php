@@ -28,10 +28,9 @@ foreach ($movies as $movie) {
 
 	$matrix[$user_email['email']][$single_movie['name']] = $movie_rating;
 }
- 
+
 
 $array = getRecommendation($matrix, 'user@user.com');
 foreach ($array as $key => $value) {
 	echo $key . '<br>';
 }
-
